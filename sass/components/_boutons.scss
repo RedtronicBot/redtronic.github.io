@@ -1,0 +1,40 @@
+@import "../utils/variables";
+.bouton
+{
+    display: flex;
+    height: 50px;
+    background-color: $couleurPrimaire;
+    cursor: pointer;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 30px;
+    margin-top: 30px;
+    box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.20);
+    &__paragraphe
+    {
+        padding:0 20px;
+        color: white;
+    }
+}
+
+.bouton_fonctionnement_restaurant
+{
+    display:flex;
+    height: 70px;
+    width: 320px;
+    margin-top:20px;
+    background-color: #F7F7F7;
+    border-radius: 30px;
+    color:black;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.20);
+    &:hover
+    {
+        background-color: #F5EDFF;    
+    }
+    &__paragraphe
+    {
+        margin:auto; 
+    }
+}
