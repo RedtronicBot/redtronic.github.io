@@ -1,0 +1,93 @@
+@import "../utils/variables";
+.carte_restaurant
+{
+    display: flex;
+    flex-direction: column;
+    width: 92%;
+    height:310px;
+    gap:1rem;
+    margin-bottom:20px;
+    text-decoration: none;
+    color:black;
+    border-radius: 20px;
+    background-color: white;
+    &__image
+    {
+        width: 100%;
+        height: 218px;
+        object-fit: cover;
+        border-radius: 20px 20px 0 0;
+    }
+    &__conteneur
+    {
+        display: flex;
+        width: 92% ;
+        margin:0 auto 0 auto;
+        justify-content: space-between;
+    }
+}
+.coeur_solid
+{
+    position: absolute;
+    /*right:2rem;
+    bottom:2rem;  */
+    z-index:0;
+    display: none;
+    
+     
+}
+.coeur_regular
+{
+    position: absolute;
+   /* right:2rem;
+    bottom:2rem; */
+    z-index: 2; 
+}
+.logo_coeur
+{
+    position: relative;
+    width:32px;
+    height:32px;
+    display: flex;
+    &:hover > .coeur_regular
+    {
+        display: none;   
+    }
+    &:hover > .coeur_solid
+    {
+        display: block;
+        animation: fill 2s forwards;
+    }
+}
+@keyframes fill
+{
+    0%
+    {
+        color:$couleurPrimaire;
+    }
+    100%
+    {
+        background: linear-gradient(180deg, $couleurPrimaire 10%,#E972DA);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;   
+    }
+}
+.nouveau
+{
+    position: relative;
+    &::before
+    {
+        content:"Nouveau";
+        position: absolute;
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        top:1rem;
+        right:1rem;
+        width:5rem;
+        height: 1.5rem;
+        background-color: $couleurTertiaire;
+        color: darken($couleurTertiaire,50%)
+    }
+}

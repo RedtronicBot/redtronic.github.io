@@ -16,7 +16,7 @@ h1 {
   font-family: Shrikhand, cursive;
 }
 
-h2, p {
+h2, h3, p, a {
   font-family: Roboto, sans-serif;
 }
 
@@ -85,24 +85,30 @@ h2, p {
 #restaurants {
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin-top: 70px;
   background-color: #F7F7F7;
 }
 
 .titre_restaurant {
-  margin: 70px 0 0 20px;
+  display: flex;
+  width: 100%;
+  margin: 70px 0 20px 40px;
 }
 
 .bouton {
   display: flex;
   height: 50px;
-  background-color: #9356DC;
+  background: linear-gradient(175deg, #E972DA 30%, #9356DC);
   cursor: pointer;
   align-items: center;
   text-decoration: none;
   border-radius: 30px;
   margin-top: 30px;
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+}
+.bouton:hover {
+  background: linear-gradient(175deg, #9356DC 30%, #E972DA);
 }
 .bouton__paragraphe {
   padding: 0 20px;
@@ -141,6 +147,88 @@ h2, p {
   color: white;
   position: absolute;
   left: 0px;
+}
+
+.carte_restaurant {
+  display: flex;
+  flex-direction: column;
+  width: 92%;
+  height: 310px;
+  gap: 1rem;
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: black;
+  border-radius: 20px;
+  background-color: white;
+}
+.carte_restaurant__image {
+  width: 100%;
+  height: 218px;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+.carte_restaurant__conteneur {
+  display: flex;
+  width: 92%;
+  margin: 0 auto 0 auto;
+  justify-content: space-between;
+}
+
+.coeur_solid {
+  position: absolute;
+  /*right:2rem;
+  bottom:2rem;  */
+  z-index: 0;
+  display: none;
+}
+
+.coeur_regular {
+  position: absolute;
+  /* right:2rem;
+   bottom:2rem; */
+  z-index: 2;
+}
+
+.logo_coeur {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  display: flex;
+}
+.logo_coeur:hover > .coeur_regular {
+  display: none;
+}
+.logo_coeur:hover > .coeur_solid {
+  display: block;
+  animation: fill 2s forwards;
+}
+
+@keyframes fill {
+  0% {
+    color: #9356DC;
+  }
+  100% {
+    background: linear-gradient(180deg, #9356DC 10%, #E972DA);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+}
+.nouveau {
+  position: relative;
+}
+.nouveau::before {
+  content: "Nouveau";
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 1rem;
+  right: 1rem;
+  width: 5rem;
+  height: 1.5rem;
+  background-color: #99E2D0;
+  color: #1b6150;
 }
 
 /*# sourceMappingURL=style.css.map */
