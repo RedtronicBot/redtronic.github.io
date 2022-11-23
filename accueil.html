@@ -3,7 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/style.css">
+        <script src="https://kit.fontawesome.com/fa1581132d.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/style.css">       
         <title>OhMyFood!</title>
     </head>
     <body>
@@ -13,7 +14,7 @@
         <main>
             <section class="section_explication_principe">
                 <article class="article_emplacement_restaurant">
-                    <p class="article_emplacement_restaurant__paragraphe">Paris,Belleville</p>
+                    <i class="fa-solid fa-location-dot"></i><p class="article_emplacement_restaurant__paragraphe">Paris,Belleville</p>
                 </article>
                 <article class="article_decouverte_restaurant">
                     <h2 class="article_decouverte_restaurant__titre">Réserver le menu qui vous convient</h2>
@@ -23,14 +24,17 @@
                 <article class="article_fonctionnement_restaurant">
                     <h2>Fonctionnement</h2>
                     <ul class="article_fonctionnement_restaurant__liste">
-                        <li><a href="#" class="bouton_fonctionnement_restaurant"><p class="bouton_fonctionnement_restaurant__paragraphe">Choisissez un restaurant</p></a></li>
-                        <li><a href="#" class="bouton_fonctionnement_restaurant"><p class="bouton_fonctionnement_restaurant__paragraphe">Composez votre menu</p></a></li>
-                        <li><a href="#" class="bouton_fonctionnement_restaurant"><p class="bouton_fonctionnement_restaurant__paragraphe">Dégustez au restaurant</p></a></li>
+                        <li><div class="bouton_fonctionnement_restaurant"><p class="bouton_fonctionnement_restaurant__ordre">1</p><i class="fa-solid fa-mobile-screen-button logo_hover"></i><p>Choisissez un restaurant</p></div></li>
+                        <li><div class="bouton_fonctionnement_restaurant"><p class="bouton_fonctionnement_restaurant__ordre">2</p><i class="fa-solid fa-list logo_hover"></i><p>Composez votre menu</p></div></li>
+                        <li><div class="bouton_fonctionnement_restaurant"><p class="bouton_fonctionnement_restaurant__ordre">3</p><i class="fa-solid fa-store logo_hover"></i><p>Dégustez au restaurant</p></div></li>
                     </ul>
                 </article>
             </section>
             <section id="restaurants">
-                <h2>Restaurants</h2>    
+                <h2 class="titre_restaurant">Restaurants</h2>   
+                <article class="article_carte_restaurant">
+
+                </article> 
             </section>
         </main>
         <footer>

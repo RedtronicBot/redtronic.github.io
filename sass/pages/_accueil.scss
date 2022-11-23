@@ -4,12 +4,10 @@
     display: flex;
     height:50px;
     width: 100%;
-    margin-top:12px;
     background-color: $couleurBandeauEmplacement;
-    &__paragraphe
-    {
-        margin:auto;
-    } 
+    gap:1rem;
+    align-items: center;
+    justify-content: center;
 }
 .article_decouverte_restaurant
 {
@@ -42,7 +40,14 @@
     margin-top:50px;
     &__liste
     {
+        display: flex;
+        flex-direction: column;
         list-style: none;
+        gap:2rem;
+        @media screen and (min-width:1050px)
+        {
+            flex-direction: row;    
+        }
     }
 }
 
@@ -52,3 +57,17 @@
     flex-direction: column;
     align-items: center;
 }
+
+#restaurants
+{
+    display:flex;
+    flex-direction: column;
+    margin-top:70px;
+    background-color: #F7F7F7;
+}
+
+.titre_restaurant
+{
+    margin:70px 0 0 20px;
+}
+
