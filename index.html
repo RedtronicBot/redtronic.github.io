@@ -8,8 +8,9 @@
         <title>OhMyFood!</title>
     </head>
     <body>
-        <header id="header_logo">
-            <img src="./images/logo/ohmyfood@2x.svg" width="165" height="30">    
+        <div class="loading_spinner"><i class="fa-solid fa-circle-notch fa-4x loading_spinner__cercle"></i></div>
+        <header class="header_logo">
+            <img src="./images/logo/ohmyfood@2x.svg" width="165" height="30" class="header_logo__image">    
         </header>
         <main>
             <section class="section_explication_principe">
@@ -86,8 +87,16 @@
                 </a>
             </section>
         </main>
-        <footer>
-
-        </footer>
+        <footer class="footer_ohmyfood">
+            <article class="article_footer">
+                <h3 class="article_footer__titre">ohmyfood</h3>
+                <ul class="article_footer__liste">
+                    <li><a href="#" class="article_footer__lien"><i class="fa-solid fa-utensils article_footer__logo"></i><p>Proposer un restaurant</p></a></li>
+                    <li><a href="#" class="article_footer__lien"><i class="fa-solid fa-handshake article_footer__logo"></i><p>Devenir partenaire</p></a></li>
+                    <li><a href="#" class="article_footer__lien"><p>Mentions légales</p></a></li>
+                    <li><a href="#" class="article_footer__lien"><p>Contact</p></a></li>
+                </ul>
+            </article>
+        </footer>  
     </body>
 </html>

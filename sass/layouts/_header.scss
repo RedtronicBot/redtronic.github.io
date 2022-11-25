@@ -1,8 +1,12 @@
-#header_logo
+.header_logo
 {
     display:flex;
     justify-content: center;
     margin-top:20px;
     box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.20);
     position: relative;   
+    &__image
+    {
+        margin-bottom: 20px;
+    }
 }

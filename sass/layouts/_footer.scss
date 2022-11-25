@@ -1,0 +1,35 @@
+.footer_ohmyfood
+{
+    width: 100%;
+    background-color: #353535;
+    color:white;
+    display: flex;
+    justify-content:center;
+}
+
+.article_footer
+{
+    display: flex;
+    flex-direction: column;
+    padding-bottom:20px;
+    &__liste
+    {
+        list-style: none;
+    }
+    &__titre
+    {
+        font-family: shrikhand;
+        margin:10px 0 0 0;
+    }
+    &__lien
+    {
+        display: flex;
+        text-decoration: none;
+        color:white;
+        margin:10px 0 0 0;
+    }
+    &__logo
+    {
+        margin-right:7px;
+    }
+}
