@@ -1,0 +1,154 @@
+@import "../utils/variables";
+.page_restaurant__image
+{
+    object-fit: cover;
+    width:100%;
+    height:257px;
+   position: relative;
+   z-index: -1;
+}
+
+.menu_restaurant
+{
+    width:100%;
+    display: flex;
+    position: relative;
+    background-color: #F7F7F7;
+    flex-direction: column;
+    border-radius: 40px 40px 0 0;
+    margin: -40px 0 0 0;
+    &__header
+    {
+        display: flex;
+    }
+    &__header > .logo_coeur
+    {
+        position: absolute;
+        top:1.4rem;
+        right:1.6rem;
+    }
+    &__titre
+    {
+        font-family: shrikhand,cursive;
+        font-weight: 400;
+        font-size: 30px;
+        margin: 20px 0 0 20px;
+        position: relative;
+    }
+    &__intitulee
+    {
+        border-bottom: 2px solid $couleurTertiaire;
+        width: 30px;
+        margin:20px 0 0 20px;
+    }
+    .bouton
+    {
+        margin:0 auto 40px auto;
+    }
+    &__bouton
+    {
+        display: flex;
+        overflow: hidden;
+        justify-content: space-between;
+        width: 100%;
+        background-color: white;
+        border-radius: 20px;
+        height:70px;
+        margin-top:20px;
+        gap:1rem;
+        &__block
+        {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+        }
+        &__plat
+        {
+            margin:0 0 0 20px;
+        }
+        &__titre
+        {
+            font-size: 16px;
+            font-weight: 500;
+            margin:10px 0 5px 0px;
+        }
+        &__paragraphe
+        {
+            height:18px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            /*white-space: pre-wrap;*/
+            word-break: break-all;
+        }
+        &__prix
+        {
+            margin: auto 10px 15px 0;
+        }
+        &__check
+        {
+            display: flex;
+            align-items:  center;
+            justify-content: center;
+            width:60px;
+            height: 100%;
+            background-color: $couleurTertiaire;
+            border-radius:0 20px 20px 0;
+            margin:0 0 0 -60px;
+            transform-origin: 100% 50%;
+            transform: translateX(60px);
+        }
+        .icone_check
+        {
+            color: white;
+        }
+        &:hover > .menu_restaurant__bouton__check
+        {
+            animation: checkapear 0.5s forwards ease-in-out;
+            .icone_check
+            {
+                animation: checkspin 0.5s forwards ease-in-out;    
+            }
+            .menu_restaurant__bouton__paragraphe
+            {
+                animation: scaledown 0.5s forwards ease-in-out;
+            }
+        }
+    }
+    &__dessert
+    {
+        margin-bottom: 40px;
+    }
+}
+
+@keyframes checkapear
+{
+    to
+    {
+        transform: translateX(0px);
+        margin:0;
+    }
+}
+@keyframes checkspin
+{
+    to
+    {
+        transform: rotate(360deg) ;
+    }
+}
+
+@keyframes scaledown
+{
+    to
+    {
+        transform: scaleX(0.7) ;
+    }
+}
+
+.bloc_menu_bouton
+{
+    display: flex;
+    flex-direction: column;
+    margin:0 auto 0 auto;
+    width: 98%;
+}

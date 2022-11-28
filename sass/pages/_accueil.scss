@@ -86,11 +86,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: disapear 3s forwards;
+    animation: disapear 2s 1s forwards;
     &__cercle
     {
         color:$couleurPrimaire; 
-        animation: spin 3s infinite   
+        animation: spin 6s infinite   
     }
 }
 
@@ -106,6 +106,21 @@
 {
     to
     {
-       transform: rotate(360deg) ;
+       transform: rotate(720deg) ;
     }    
+}
+
+.carte_partie
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap:2rem;
+    @media screen and (min-width:1050px)
+    {
+        flex-direction: row;
+        width:90%;    
+    }
+
 }

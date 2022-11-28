@@ -30,6 +30,13 @@ h2, h3, p, a {
 .header_logo__image {
   margin-bottom: 20px;
 }
+.header_logo__retour {
+  text-decoration: none;
+  color: black;
+  position: absolute;
+  top: 0.4rem;
+  left: 2rem;
+}
 
 .footer_ohmyfood {
   width: 100%;
@@ -49,6 +56,7 @@ h2, h3, p, a {
 }
 .article_footer__titre {
   font-family: shrikhand;
+  font-weight: 400;
   margin: 10px 0 0 0;
 }
 .article_footer__lien {
@@ -140,11 +148,11 @@ h2, h3, p, a {
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: disapear 3s forwards;
+  animation: disapear 2s 1s forwards;
 }
 .loading_spinner__cercle {
   color: #9356DC;
-  animation: spin 3s infinite;
+  animation: spin 6s infinite;
 }
 
 @keyframes disapear {
@@ -155,12 +163,27 @@ h2, h3, p, a {
 }
 @keyframes spin {
   to {
-    transform: rotate(360deg);
+    transform: rotate(720deg);
   }
 }
+.carte_partie {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  gap: 2rem;
+}
+@media screen and (min-width: 1050px) {
+  .carte_partie {
+    flex-direction: row;
+    width: 90%;
+  }
+}
+
 .bouton {
   display: flex;
   height: 50px;
+  width: fit-content;
   background: linear-gradient(175deg, #E972DA 30%, #9356DC);
   cursor: pointer;
   align-items: center;
@@ -291,6 +314,132 @@ h2, h3, p, a {
   height: 1.5rem;
   background-color: #99E2D0;
   color: #1b6150;
+}
+
+.page_restaurant__image {
+  object-fit: cover;
+  width: 100%;
+  height: 257px;
+  position: relative;
+  z-index: -1;
+}
+
+.menu_restaurant {
+  width: 100%;
+  display: flex;
+  position: relative;
+  background-color: #F7F7F7;
+  flex-direction: column;
+  border-radius: 40px 40px 0 0;
+  margin: -40px 0 0 0;
+}
+.menu_restaurant__header {
+  display: flex;
+}
+.menu_restaurant__header > .logo_coeur {
+  position: absolute;
+  top: 1.4rem;
+  right: 1.6rem;
+}
+.menu_restaurant__titre {
+  font-family: shrikhand, cursive;
+  font-weight: 400;
+  font-size: 30px;
+  margin: 20px 0 0 20px;
+  position: relative;
+}
+.menu_restaurant__intitulee {
+  border-bottom: 2px solid #99E2D0;
+  width: 30px;
+  margin: 20px 0 0 20px;
+}
+.menu_restaurant .bouton {
+  margin: 0 auto 40px auto;
+}
+.menu_restaurant__bouton {
+  display: flex;
+  overflow: hidden;
+  justify-content: space-between;
+  width: 100%;
+  background-color: white;
+  border-radius: 20px;
+  height: 70px;
+  margin-top: 20px;
+  gap: 1rem;
+}
+.menu_restaurant__bouton__block {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.menu_restaurant__bouton__plat {
+  margin: 0 0 0 20px;
+}
+.menu_restaurant__bouton__titre {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 10px 0 5px 0px;
+}
+.menu_restaurant__bouton__paragraphe {
+  height: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /*white-space: pre-wrap;*/
+  word-break: break-all;
+}
+.menu_restaurant__bouton__prix {
+  margin: auto 10px 15px 0;
+}
+.menu_restaurant__bouton__check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 100%;
+  background-color: #99E2D0;
+  border-radius: 0 20px 20px 0;
+  margin: 0 0 0 -60px;
+  transform-origin: 100% 50%;
+  transform: translateX(60px);
+}
+.menu_restaurant__bouton .icone_check {
+  color: white;
+}
+.menu_restaurant__bouton:hover > .menu_restaurant__bouton__check {
+  animation: checkapear 0.5s forwards ease-in-out;
+}
+.menu_restaurant__bouton:hover > .menu_restaurant__bouton__check .icone_check {
+  animation: checkspin 0.5s forwards ease-in-out;
+}
+.menu_restaurant__bouton:hover > .menu_restaurant__bouton__check .menu_restaurant__bouton__paragraphe {
+  animation: scaledown 0.5s forwards ease-in-out;
+}
+.menu_restaurant__dessert {
+  margin-bottom: 40px;
+}
+
+@keyframes checkapear {
+  to {
+    transform: translateX(0px);
+    margin: 0;
+  }
+}
+@keyframes checkspin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes scaledown {
+  to {
+    transform: scaleX(0.7);
+  }
+}
+.bloc_menu_bouton {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 0 auto;
+  width: 98%;
 }
 
 /*# sourceMappingURL=style.css.map */
