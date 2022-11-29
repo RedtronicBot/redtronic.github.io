@@ -365,6 +365,7 @@ h2, h3, p, a {
   background-color: white;
   border-radius: 20px;
   height: 70px;
+  cursor: pointer;
   margin-top: 20px;
   gap: 1rem;
 }
