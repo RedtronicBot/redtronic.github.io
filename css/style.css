@@ -134,7 +134,7 @@ h2, h3, p, a {
 .titre_restaurant {
   display: flex;
   width: 100%;
-  margin: 70px 0 20px 40px;
+  margin: 70px 0 20px 5%;
 }
 
 .loading_spinner {
@@ -176,7 +176,7 @@ h2, h3, p, a {
 @media screen and (min-width: 1050px) {
   .carte_partie {
     flex-direction: row;
-    width: 90%;
+    width: 95%;
   }
 }
 
@@ -193,7 +193,8 @@ h2, h3, p, a {
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
 }
 .bouton:hover {
-  background: linear-gradient(175deg, #9356DC 30%, #E972DA);
+  transform: scale(1.1);
+  transition: transform 0.4s;
 }
 .bouton__paragraphe {
   padding: 0 20px;
@@ -382,7 +383,7 @@ h2, h3, p, a {
   margin: 10px 0 5px 0px;
 }
 .menu_restaurant__bouton__paragraphe {
-  height: 18px;
+  /*height:18px;*/
   overflow: hidden;
   text-overflow: ellipsis;
   /*white-space: pre-wrap;*/
@@ -445,6 +446,32 @@ h2, h3, p, a {
   .bloc_menu_bouton {
     flex-direction: row;
     gap: 1rem;
+  }
+}
+
+.animation1 {
+  opacity: 0;
+  animation: apear 0.5s 0s forwards ease-in-out;
+}
+
+.animation2 {
+  opacity: 0;
+  animation: apear 0.5s 0.2s forwards ease-in-out;
+}
+
+.animation3 {
+  opacity: 0;
+  animation: apear 0.5s 0.4s forwards ease-in-out;
+}
+
+@keyframes apear {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
   }
 }
 

@@ -13,7 +13,8 @@
     box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.20);
     &:hover
     {
-        background: linear-gradient(175deg, $couleurPrimaire 30%,#E972DA) ;    
+        transform: scale(1.1);
+        transition: transform 0.4s;  
     }
     &__paragraphe
     {

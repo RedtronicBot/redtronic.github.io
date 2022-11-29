@@ -75,7 +75,7 @@
         }
         &__paragraphe
         {
-            height:18px;
+            /*height:18px;*/
             overflow: hidden;
             text-overflow: ellipsis;
             /*white-space: pre-wrap;*/
@@ -155,5 +155,37 @@
     {
         flex-direction: row;
         gap:1rem;
+    }
+}
+
+.animation1
+{
+    opacity: 0;
+    animation: apear 0.5s 0s forwards ease-in-out
+}
+
+.animation2
+{
+    opacity: 0;
+    animation: apear 0.5s 0.2s forwards ease-in-out
+}
+
+.animation3
+{
+    opacity: 0;
+    animation: apear 0.5s 0.4s forwards ease-in-out
+}
+
+@keyframes apear
+{
+    from
+    {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to
+    {
+        transform: translateY(0px);
+        opacity: 1;    
     }
 }

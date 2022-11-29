@@ -71,7 +71,7 @@
 {
     display: flex;
     width: 100%;
-    margin:70px 0 20px 40px;
+    margin:70px 0 20px 5%;
 }
 
 .loading_spinner
@@ -120,7 +120,8 @@
     @media screen and (min-width:1050px)
     {
         flex-direction: row;
-        width:90%;    
+        width:95%;
+
     }
 
 }
