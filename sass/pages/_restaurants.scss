@@ -66,29 +66,40 @@
         }
         &__plat
         {
-            margin:0 0 0 20px;
+            margin:0 0 0 13px;
+        }
+        &__bloc_titre
+        {
+            display: table;
+            table-layout: fixed;
+            width: 100%;
+            white-space: nowrap;   
         }
         &__titre
         {
             font-size: 18px;
-            height:24px;
-            overflow: hidden;
             font-weight: 500;
             margin:10px 0 5px 0px;
-            word-break: break-all;
+            display: table-cell;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         &__paragraphe
         {
-            height:22px;
+            display: table;
+            table-layout: fixed;
             width: 100%;
+            white-space: nowrap;
+        }
+        &__paragraphe > *
+        {
+            display: table-cell;
             overflow: hidden;
             text-overflow: ellipsis;
-            word-break: break-all;
-            /*white-space: nowrap;*/
         }
         &__prix
         {
-            margin: auto 10px 15px 0;
+            margin: auto -3px 15px 0;
         }
         &__check
         {

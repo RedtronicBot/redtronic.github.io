@@ -43,16 +43,24 @@ h2, h3, p, a {
   background-color: #353535;
   color: white;
   display: flex;
-  justify-content: center;
 }
 
 .article_footer {
   display: flex;
   flex-direction: column;
   padding-bottom: 20px;
+  margin-left: 20px;
 }
 .article_footer__liste {
+  display: flex;
+  flex-direction: column;
   list-style: none;
+}
+@media screen and (min-width: 1050px) {
+  .article_footer__liste {
+    flex-direction: row;
+    gap: 1rem;
+  }
 }
 .article_footer__titre {
   font-family: shrikhand;
@@ -376,26 +384,35 @@ h2, h3, p, a {
   position: relative;
 }
 .menu_restaurant__bouton__plat {
-  margin: 0 0 0 20px;
+  margin: 0 0 0 13px;
+}
+.menu_restaurant__bouton__bloc_titre {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  white-space: nowrap;
 }
 .menu_restaurant__bouton__titre {
   font-size: 18px;
-  height: 24px;
-  overflow: hidden;
   font-weight: 500;
   margin: 10px 0 5px 0px;
-  word-break: break-all;
-}
-.menu_restaurant__bouton__paragraphe {
-  height: 22px;
-  width: 100%;
+  display: table-cell;
   overflow: hidden;
   text-overflow: ellipsis;
-  word-break: break-all;
-  /*white-space: nowrap;*/
+}
+.menu_restaurant__bouton__paragraphe {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  white-space: nowrap;
+}
+.menu_restaurant__bouton__paragraphe > * {
+  display: table-cell;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu_restaurant__bouton__prix {
-  margin: auto 10px 15px 0;
+  margin: auto -3px 15px 0;
 }
 .menu_restaurant__bouton__check {
   display: flex;

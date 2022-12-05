@@ -4,7 +4,6 @@
     background-color: #353535;
     color:white;
     display: flex;
-    justify-content:center;
 }
 
 .article_footer
@@ -12,9 +11,17 @@
     display: flex;
     flex-direction: column;
     padding-bottom:20px;
+    margin-left: 20px;
     &__liste
     {
+        display: flex;
+        flex-direction: column;
         list-style: none;
+        @media screen and (min-width:1050px)
+    {
+        flex-direction: row;
+        gap:1rem;
+    }
     }
     &__titre
     {
