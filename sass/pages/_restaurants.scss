@@ -40,6 +40,9 @@
         border-bottom: 2px solid $couleurTertiaire;
         width: 30px;
         margin:20px 0 0 20px;
+        font-weight: 400;
+        font-size: 18px;
+        font-family: Roboto,sans-serif;
     }
     .bouton
     {
@@ -67,6 +70,9 @@
         &__plat
         {
             margin:0 0 0 13px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
         }
         &__bloc_titre
         {

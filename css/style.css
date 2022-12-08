@@ -361,6 +361,9 @@ h2, h3, p, a {
   border-bottom: 2px solid #99E2D0;
   width: 30px;
   margin: 20px 0 0 20px;
+  font-weight: 400;
+  font-size: 18px;
+  font-family: Roboto, sans-serif;
 }
 .menu_restaurant .bouton {
   margin: 0 auto 40px auto;
@@ -385,6 +388,9 @@ h2, h3, p, a {
 }
 .menu_restaurant__bouton__plat {
   margin: 0 0 0 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 .menu_restaurant__bouton__bloc_titre {
   display: table;
