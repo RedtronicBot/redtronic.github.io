@@ -12,16 +12,21 @@
     flex-direction: column;
     padding-bottom:20px;
     margin-left: 20px;
+    @media screen and (min-width:1050px)
+    {
+        align-items: center;
+        margin:0 auto 0 auto;
+    }
     &__liste
     {
         display: flex;
         flex-direction: column;
         list-style: none;
         @media screen and (min-width:1050px)
-    {
-        flex-direction: row;
-        gap:1rem;
-    }
+        {
+            flex-direction: row;
+            gap:1rem;
+        }
     }
     &__titre
     {
